@@ -24,12 +24,8 @@ public class UsersController(DataContext context) : ControllerBase
         var user = await context.Users.FindAsync(id);
 
         if (user == null) return NotFound();
-
         return user;
     }
 
 
 }
-
-
-21 2.37
