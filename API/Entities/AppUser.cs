@@ -10,3 +10,4 @@ public class AppUser
     public required byte[] PasswordHash { get; set; }
     public required byte[] PasswordSalt { get; set; }
 }
+//31. 3.05
