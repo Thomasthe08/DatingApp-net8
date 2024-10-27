@@ -1,4 +1,6 @@
-export interface User{
-    username: string;
-    token: string;
+import { model } from '@angular/core';
+
+export interface User {
+  username: string;
+  token: string;
 }
