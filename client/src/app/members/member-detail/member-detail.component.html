@@ -44,8 +44,11 @@
                 <h4>Interests</h4>
                 {{member.interests}}
             </tab>
-            <tab heading="Photos">
-                <p>Photos will go here</p>
+            <tab heading="Photos" #photoTab="tab">
+                @if(photoTab.active){
+                <gallery [items]="images" thumbPosition="left"></gallery>
+                <!-- <gallery [items]="images" class="gallery"></gallery> -->
+                }
             </tab>
             <tab heading="Message">
                 <p>Message will go here</p>
