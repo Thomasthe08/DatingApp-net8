@@ -21,6 +21,14 @@ export class MemberListComponent implements OnInit {
 
   loadMembers() {
     this.memberService.getMembers(this.pageNumber, this.pageSize);
+    console.log(`Page Size: ${this.memberService.paginatedResult()?.pagination}`); // Print the page number
+  }
+
+  pageChanged(event: any){
+    if(this.pageNumber != event.page){
+      this.pageNumber = event.page;
+      this.loadMembers();
+    }
   }
 
 }
