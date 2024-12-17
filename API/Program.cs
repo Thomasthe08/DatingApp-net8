@@ -24,6 +24,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapHub<PresenceHub>("hubs/presence");
+app.MapHub<PresenceHub>("hubs/message");
 
 //Seed.cs read UserSeedData.jons pre again database   --dotnet ef database drop --dotnet watch
 using var scope = app.Services.CreateScope();
