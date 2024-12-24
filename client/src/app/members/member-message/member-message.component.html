@@ -1,8 +1,8 @@
 <div class="card">
     <div class="card-body">
-        @if(messageService.messageThread().length === 0){
+        @if(messageService.messageThread().length === 0) {
             <p>No Messages yet</p>
-        }@else {
+        } @else {
             <ul class="chat">
                 @for (message of messageService.messageThread(); track message.id) {
                     <li>
